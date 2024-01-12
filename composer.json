@@ -1,0 +1,41 @@
+{
+    "name": "dynamic/silverstripe-elemental-card",
+    "description": "A simple Bootstrap-style Card for Silverstripe Elemental. Intended for use with Elemental Grid.",
+    "license": "BSD-3-Clause",
+    "type": "silverstripe-vendormodule",
+    "keywords": [
+        "silverstripe",
+        "CMS"
+    ],
+    "authors": [
+        {
+            "name": "Dynamic",
+            "email": "dev@dynamicagency.com",
+            "homepage": "https://www.dynamicagency.com"
+        }
+    ],
+    "require": {
+        "dnadesign/silverstripe-elemental": "^5",
+        "silverstripe/linkfield": "^3.0",
+        "silverstripe/recipe-cms": "^5.0"
+    },
+    "require-dev": {
+        "silverstripe/recipe-testing": "^3"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "autoload": {
+        "psr-4": {
+            "Dynamic\\Elements\\Card\\": "src/",
+            "Dynamic\\Elements\\Card\\Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "composer/installers": true,
+            "silverstripe/recipe-plugin": true,
+            "silverstripe/vendor-plugin": true
+        },
+        "process-timeout": 600
+    }
+}
