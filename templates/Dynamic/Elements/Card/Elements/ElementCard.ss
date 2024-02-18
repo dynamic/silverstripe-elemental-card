@@ -8,7 +8,7 @@
         <div class="card-body">
             <% if $Title && $ShowTitle %><$TitleTag class="element__title $TitleSizeClass">$Title</$TitleTag><% end_if %>
             <% if $Content %><div class="card-text">$Content</div><% end_if %>
-            <% if $ElementLink %><p>$ElementLink</p><% end_if %>
+            <% if $ElementLink %><p><a href="$ElementLink.URL" class="btn btn-primary" title="$ElementLink.Title"<% if $ElementLink.OpenInNew %> target="_blank" rel="noopener noreferrer"<% end_if %>>$ElementLink.Title</a></p><% end_if %>
         </div>
     </div>
 </div>
