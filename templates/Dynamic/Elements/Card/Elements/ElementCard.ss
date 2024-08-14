@@ -1,14 +1,22 @@
-<div class="element__card">
-    <div class="card h-100">
+<div class="card h-100">
+    <div class="row g-0">
         <% if $Image %>
-            <% if $ElementLink %><a href="$ElementLink.LinkURL" title="Go to $ElementLink.Title.ATT"><% end_if %>
-                <img src="$Image.FocusFill(500,330).URL" class="card-img-top" alt="$Image.Title.ATT">
-            <% if $ElementLink %></a><% end_if %>
+            <% if $Position == 'Top' %>
+                <img src="$Image.FocusFill(800,530).URL" class="card-img-top" alt="$Image.Title.ATT">
+            <% else %>
+                <div class="col-lg-7">
+                    <img src="$Image.FocusFill(800,530).URL" class="img-fluid" alt="$Image.Title.ATT">
+                </div>
+            <% end_if %>
         <% end_if %>
-        <div class="card-body">
-            <% if $Title && $ShowTitle %><$TitleTag class="element__title $TitleSizeClass">$Title</$TitleTag><% end_if %>
-            <% if $Content %><div class="card-text">$Content</div><% end_if %>
-            <% if $ElementLink %><p><a href="$ElementLink.URL" class="btn btn-primary" title="$ElementLink.Title"<% if $ElementLink.OpenInNew %> target="_blank" rel="noopener noreferrer"<% end_if %>>$ElementLink.Title</a></p><% end_if %>
+        <div class="<% if $Position != 'Top' %> col-lg-5<% end_if %><% if $Position == 'Right' %> order-md-first<% end_if %>">
+            <div class="card-body h-100 d-flex align-items-center">
+                <div>
+                    <% if $Title && $ShowTitle %><$TitleTag class="element__title $TitleSizeClass">$Title</$TitleTag><% end_if %>
+                    <% if $Content %><div class="card-text">$Content</div><% end_if %>
+                    <% if $ElementLink %><p><a href="$ElementLink.URL" class="btn btn-primary" title="$ElementLink.Title"<% if $ElementLink.OpenInNew %> target="_blank" rel="noopener noreferrer"<% end_if %>>$ElementLink.Title</a></p><% end_if %>
+                </div>
+            </div>
         </div>
     </div>
 </div>
