@@ -51,7 +51,7 @@ class ElementCard extends BaseElement
      * @var string
      * @config
      */
-    private static string $icon = 'font-icon-block-content';
+    private static string $icon = 'font-icon-block-content'; 
 
     /**
      * @var array|string[]
@@ -59,6 +59,7 @@ class ElementCard extends BaseElement
      */
     private static array $db = [
         'Content' => 'HTMLText',
+        'Position' => 'Enum("Left, Right, Top", "Left")',
     ];
 
     /**
@@ -90,6 +91,9 @@ class ElementCard extends BaseElement
         $labels['Title'] = _t(__CLASS__ . '.TitleLabel', 'Title');
         $labels['Content'] = _t(__CLASS__ . '.ContentLabel', 'Description');
         $labels['ElementLink'] = _t(__CLASS__ . '.ElementLinkLabel', 'Link');
+        $labels['Position'] = _t(__CLASS__ . '.PositionLabel', 'Image Position');
+        $labels['Image'] = _t(__CLASS__ . '.Image', 'Image');
+
 
         return $labels;
     }
@@ -101,14 +105,19 @@ class ElementCard extends BaseElement
     {
         $this->beforeUpdateCMSFields(function (FieldList $fields) {
             // @phpstan-ignore-next-line
-            $fields->dataFieldByName('Image')
-                ->setFolderName('Uploads/Elements/Card');
-
-            $fields->insertBefore('Content', $fields->dataFieldByName('Image'));
+            $fields->dataFieldByName('Content')
+                ->setRows(8);
 
             // @phpstan-ignore-next-line
-            $fields->dataFieldByName('Content')
-                ->setRows(5);
+            $fields->dataFieldByName('Image')
+                ->setFolderName('Uploads/Elements/Card');
+            $fields->insertBefore('Position', $fields->dataFieldByName('Image'));
+
+            $fields->dataFieldByName('Position')
+                ->setDescription(_t(
+                    __CLASS__ . 'PositionDescription', 
+                    'Position of the image in relation to the content. Image will display on top at smaller breakpoints.'
+                ));
 
             $fields->replaceField(
                 'ElementLinkID',
