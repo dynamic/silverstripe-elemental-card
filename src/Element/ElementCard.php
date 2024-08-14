@@ -51,7 +51,7 @@ class ElementCard extends BaseElement
      * @var string
      * @config
      */
-    private static string $icon = 'font-icon-block-content'; 
+    private static string $icon = 'font-icon-block-content';
 
     /**
      * @var array|string[]
@@ -115,8 +115,9 @@ class ElementCard extends BaseElement
 
             $fields->dataFieldByName('Position')
                 ->setDescription(_t(
-                    __CLASS__ . 'PositionDescription', 
-                    'Position of the image in relation to the content. Image will display on top at smaller breakpoints.'
+                    __CLASS__ . 'PositionDescription',
+                    'Position of the image in relation to the content. 
+                        Image will display on top at smaller breakpoints.'
                 ));
 
             $fields->replaceField(
