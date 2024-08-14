@@ -76,6 +76,7 @@ class ElementCard extends BaseElement
      */
     private static array $owns = [
         'Image',
+        'ElementLink',
     ];
 
     /**
