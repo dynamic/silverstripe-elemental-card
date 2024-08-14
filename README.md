@@ -13,7 +13,7 @@ A simple Bootstrap-style Card for Silverstripe Elemental. Intended for use with 
 ## Requirements
 
 * dnadesign/silverstripe-elemental: ^5.0
-* silverstripe/linkfield: ^3
+* silverstripe/linkfield: ^4.0
 
 ## Installation
 
@@ -30,6 +30,10 @@ A simple Bootstrap-style Card for Silverstripe Elemental. Intended for use with 
 ### Template Notes
 
 The default templates are based off [Bootstrap 5](https://getbootstrap.com/) card component.
+
+## Upgrading from version 1
+
+This module drops `gorriecoe/silverstripe-linkfield` usage in favor of `silverstripe/linkfield`.
 
 ## Getting more elements
 
