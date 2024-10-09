@@ -81,6 +81,22 @@ class ElementCard extends BaseElement
     ];
 
     /**
+     * @var array
+     * @config
+     */
+    private static $cascade_duplicates = [
+        'ElementLink',
+    ];
+
+    /**
+     * @var array
+     * @config
+     */
+    private static array $cascade_deletes = [
+        'ElementLink',
+    ];
+
+    /**
      * @param bool $includerelations
      * @return array
      */
