@@ -16,7 +16,7 @@
     ],
     "require": {
         "dnadesign/silverstripe-elemental": "^6.0@beta",
-        "silverstripe/linkfield": "~3.0",
+        "silverstripe/linkfield": "^3.0",
         "silverstripe/recipe-cms": "~6.0.0@beta"
     },
     "require-dev": {
