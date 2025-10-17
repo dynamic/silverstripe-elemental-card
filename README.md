@@ -12,8 +12,9 @@ A simple Bootstrap-style Card for Silverstripe Elemental. Intended for use with 
 
 ## Requirements
 
-* dnadesign/silverstripe-elemental: ^5.0
-* silverstripe/linkfield: ^4.0
+* SilverStripe ^6.0
+* dnadesign/silverstripe-elemental: ^6.0
+* silverstripe/linkfield: ^5.0
 
 ## Installation
 
@@ -30,6 +31,12 @@ A simple Bootstrap-style Card for Silverstripe Elemental. Intended for use with 
 ### Template Notes
 
 The default templates are based off [Bootstrap 5](https://getbootstrap.com/) card component.
+
+## Upgrading from version 2
+
+ElementCard now uses LinkField v5, which changes the `ElementLink` field from a `DBLink` database field to a `has_one` relationship with the `Link` model. This provides better management and more features for links in SilverStripe 6.
+
+If you're upgrading from version 2, you may need to migrate existing link data. See the [LinkField upgrade documentation](https://github.com/silverstripe/silverstripe-linkfield) for more information.
 
 ## Upgrading from version 1
 
