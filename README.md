@@ -3,7 +3,6 @@
 A simple Bootstrap-style Card for Silverstripe Elemental. Intended for use with Elemental Grid.
 
 ![CI](https://github.com/dynamic/silverstripe-elemental-card/workflows/CI/badge.svg)
-[![codecov](https://codecov.io/gh/dynamic/silverstripe-elemental-card/branch/master/graph/badge.svg)](https://codecov.io/gh/dynamic/silverstripe-elemental-card)
 
 [![Latest Stable Version](https://poser.pugx.org/dynamic/silverstripe-elemental-card/v/stable)](https://packagist.org/packages/dynamic/silverstripe-elemental-card)
 [![Total Downloads](https://poser.pugx.org/dynamic/silverstripe-elemental-card/downloads)](https://packagist.org/packages/dynamic/silverstripe-elemental-card)
@@ -12,8 +11,9 @@ A simple Bootstrap-style Card for Silverstripe Elemental. Intended for use with 
 
 ## Requirements
 
-* dnadesign/silverstripe-elemental: ^5.0
-* silverstripe/linkfield: ^4.0
+* SilverStripe ^6.0
+* dnadesign/silverstripe-elemental: ^6.0
+* silverstripe/linkfield: ^5.0
 
 ## Installation
 
@@ -25,11 +25,31 @@ See [License](LICENSE.md)
 
 ## Usage
 
-A simple Bootstrap-style Card for Silverstripe Elemental. Intended for use with Elemental Grid.
+Elemental Card provides a flexible card component for displaying content with an optional image and link. Each card can include:
+
+- **Title** - The card heading
+- **Content** - HTML content for the card body/description
+- **Image** - An optional image that enhances the card
+- **Link** - An optional call-to-action link using SilverStripe LinkField, supporting internal pages, external URLs, email links, and more
+
+Cards are perfect for:
+- Feature highlights
+- Team member profiles  
+- Product or service showcases
+- News or blog post teasers
+- Call-to-action blocks
+
+When used with [Elemental Grid](https://github.com/dynamic/silverstripe-elemental-grid), you can create responsive card layouts with multiple cards per row.
 
 ### Template Notes
 
-The default templates are based off [Bootstrap 5](https://getbootstrap.com/) card component.
+The default templates are based on the [Bootstrap 5](https://getbootstrap.com/) card component, making it easy to integrate with Bootstrap-based themes. You can override the templates in your own theme to match your design system.
+
+## Upgrading from version 2
+
+ElementCard now uses LinkField v5, which changes the `ElementLink` field from a `DBLink` database field to a `has_one` relationship with the `Link` model. This provides better management and more features for links in SilverStripe 6.
+
+If you're upgrading from version 2, you may need to migrate existing link data. See the [LinkField upgrade documentation](https://github.com/silverstripe/silverstripe-linkfield) for more information.
 
 ## Upgrading from version 1
 
