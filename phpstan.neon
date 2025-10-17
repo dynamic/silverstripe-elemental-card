@@ -1,0 +1,7 @@
+parameters:
+  level: 1
+  treatPhpDocTypesAsCertain: false
+  paths:
+    - src
+  ignoreErrors:
+    # SilverStripe specific ignores can be added here if needed

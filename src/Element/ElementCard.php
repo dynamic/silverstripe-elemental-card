@@ -12,14 +12,17 @@ use SilverStripe\LinkField\Models\Link;
 /**
  * Class \LakeshoreProductions\Element\Card
  *
- * @property bool $Animate
- * @property string $Animation
- * @property string $Duration
- * @property string $Delay
- * @property string $Easing
- * @property string $CardLink
- * @property int $CardImageID
- * @method Image CardImage()
+ * @property ?string $Content
+ * @property ?string $Position
+ * @property int $ImageID
+ * @property int $ElementLinkID
+ * @method Image Image()
+ * @method Link ElementLink()
+ * @mixin FileLinkTracking
+ * @mixin AssetControlExtension
+ * @mixin SiteTreeLinkTracking
+ * @mixin RecursivePublishable
+ * @mixin VersionedStateExtension
  */
 class ElementCard extends BaseElement
 {
