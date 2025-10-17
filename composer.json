@@ -20,7 +20,7 @@
         "silverstripe/recipe-cms": "^6.0"
     },
     "require-dev": {
-        "silverstripe/recipe-testing": "^3"
+        "silverstripe/recipe-testing": "^4"
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
