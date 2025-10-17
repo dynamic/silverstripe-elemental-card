@@ -18,11 +18,6 @@ use SilverStripe\LinkField\Models\Link;
  * @property int $ElementLinkID
  * @method Image Image()
  * @method Link ElementLink()
- * @mixin FileLinkTracking
- * @mixin AssetControlExtension
- * @mixin SiteTreeLinkTracking
- * @mixin RecursivePublishable
- * @mixin VersionedStateExtension
  */
 class ElementCard extends BaseElement
 {
@@ -154,7 +149,8 @@ class ElementCard extends BaseElement
      */
     public function getSummary(): string
     {
-        return DBField::create_field('HTMLText', $this->HTML)->Summary(20);
+        $summary = $this->dbObject('Content')->Summary(20);
+        return $summary ?: '';
     }
 
     /**
