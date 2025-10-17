@@ -12,14 +12,12 @@ use SilverStripe\LinkField\Models\Link;
 /**
  * Class \LakeshoreProductions\Element\Card
  *
- * @property bool $Animate
- * @property string $Animation
- * @property string $Duration
- * @property string $Delay
- * @property string $Easing
- * @property string $CardLink
- * @property int $CardImageID
- * @method Image CardImage()
+ * @property ?string $Content
+ * @property ?string $Position
+ * @property int $ImageID
+ * @property int $ElementLinkID
+ * @method Image Image()
+ * @method Link ElementLink()
  */
 class ElementCard extends BaseElement
 {
@@ -151,7 +149,8 @@ class ElementCard extends BaseElement
      */
     public function getSummary(): string
     {
-        return DBField::create_field('HTMLText', $this->HTML)->Summary(20);
+        $summary = $this->dbObject('Content')->Summary(20);
+        return $summary ?: '';
     }
 
     /**

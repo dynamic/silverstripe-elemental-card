@@ -20,7 +20,9 @@
         "silverstripe/recipe-cms": "^6.0"
     },
     "require-dev": {
-        "silverstripe/recipe-testing": "^4"
+        "cambis/silverstan": "^2.1",
+        "silverstripe/recipe-testing": "^4",
+        "squizlabs/php_codesniffer": "^3.7"
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
