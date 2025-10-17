@@ -57,7 +57,7 @@ class ElementCard extends BaseElement
      */
     private static array $db = [
         'Content' => 'HTMLText',
-        'Position' => 'Enum("Left, Right, Top", "Left")',
+        'Position' => 'Enum("Left, Right, Top", "Top")',
     ];
 
     /**
