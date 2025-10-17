@@ -21,7 +21,7 @@
     },
     "require-dev": {
         "cambis/silverstan": "^2.1",
-        "silverstripe/recipe-testing": "^4",
+        "phpunit/phpunit": "^11.3",
         "squizlabs/php_codesniffer": "^4.0"
     },
     "minimum-stability": "dev",
