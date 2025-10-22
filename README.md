@@ -11,13 +11,23 @@ A simple Bootstrap-style Card for Silverstripe Elemental. Intended for use with 
 
 ## Requirements
 
+* PHP ^8.3
 * SilverStripe ^6.0
-* dnadesign/silverstripe-elemental: ^6.0
-* silverstripe/linkfield: ^5.0
+* dnadesign/silverstripe-elemental ^6.0
+* silverstripe/linkfield ^5.0
+* jonom/focuspoint ^6.0
 
 ## Installation
 
-`composer require dynamic/silverstripe-elemental-card`
+```bash
+composer require dynamic/silverstripe-elemental-card
+```
+
+After installation, run `dev/build` and `flush`:
+
+```bash
+vendor/bin/sake dev/build flush=all
+```
 
 ## License
 
@@ -44,16 +54,6 @@ When used with [Elemental Grid](https://github.com/dynamic/silverstripe-elementa
 ### Template Notes
 
 The default templates are based on the [Bootstrap 5](https://getbootstrap.com/) card component, making it easy to integrate with Bootstrap-based themes. You can override the templates in your own theme to match your design system.
-
-## Upgrading from version 2
-
-ElementCard now uses LinkField v5, which changes the `ElementLink` field from a `DBLink` database field to a `has_one` relationship with the `Link` model. This provides better management and more features for links in SilverStripe 6.
-
-If you're upgrading from version 2, you may need to migrate existing link data. See the [LinkField upgrade documentation](https://github.com/silverstripe/silverstripe-linkfield) for more information.
-
-## Upgrading from version 1
-
-This module drops `gorriecoe/silverstripe-linkfield` usage in favor of `silverstripe/linkfield`.
 
 ## Getting more elements
 
