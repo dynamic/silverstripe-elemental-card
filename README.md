@@ -3,15 +3,16 @@
 A simple Bootstrap-style Card for Silverstripe Elemental. Intended for use with Elemental Grid.
 
 ![CI](https://github.com/dynamic/silverstripe-elemental-card/workflows/CI/badge.svg)
+[![GitHub Sponsors](https://img.shields.io/github/sponsors/dynamic?label=Sponsors&logo=GitHub%20Sponsors&style=flat&color=ea4aaa)](https://github.com/sponsors/dynamic)
 
 [![Latest Stable Version](https://poser.pugx.org/dynamic/silverstripe-elemental-card/v/stable)](https://packagist.org/packages/dynamic/silverstripe-elemental-card)
 [![Total Downloads](https://poser.pugx.org/dynamic/silverstripe-elemental-card/downloads)](https://packagist.org/packages/dynamic/silverstripe-elemental-card)
-[![Latest Unstable Version](https://poser.pugx.org/dynamic/silverstripe-elemental-card/v/unstable)](https://packagist.org/packages/dynamic/silverstripe-elemental-card)
 [![License](https://poser.pugx.org/dynamic/silverstripe-elemental-card/license)](https://packagist.org/packages/dynamic/silverstripe-elemental-card)
 
 ## Requirements
 
-* SilverStripe ^6.0
+* PHP: ^8.1
+* SilverStripe: ^6.0
 * dnadesign/silverstripe-elemental: ^6.0
 * silverstripe/linkfield: ^5.0
 
@@ -19,9 +20,13 @@ A simple Bootstrap-style Card for Silverstripe Elemental. Intended for use with 
 
 `composer require dynamic/silverstripe-elemental-card`
 
-## License
+## Features
 
-See [License](LICENSE.md)
+- **Card Component** - A flexible, reusable Bootstrap 5-style card element
+- **Image Support** - Optional images to enhance card visual appeal
+- **LinkField Integration** - Call-to-action links supporting internal pages, external URLs, email links, and more
+- **Responsive Layout** - Works seamlessly with Elemental Grid for multi-column layouts
+- **Customizable Templates** - Override templates to match your design system
 
 ## Usage
 
@@ -50,6 +55,8 @@ The default templates are based on the [Bootstrap 5](https://getbootstrap.com/) 
 ElementCard now uses LinkField v5, which changes the `ElementLink` field from a `DBLink` database field to a `has_one` relationship with the `Link` model. This provides better management and more features for links in SilverStripe 6.
 
 If you're upgrading from version 2, you may need to migrate existing link data. See the [LinkField upgrade documentation](https://github.com/silverstripe/silverstripe-linkfield) for more information.
+
+Elemental Card v3 is compatible with SilverStripe 6. See the [SilverStripe 6 Upgrade Guide](https://docs.silverstripe.org/en/6/) for more details on the upgrade process.
 
 ## Upgrading from version 1
 
