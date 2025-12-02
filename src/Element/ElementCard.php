@@ -152,12 +152,4 @@ class ElementCard extends BaseElement
         $summary = $this->dbObject('Content')->Summary(20);
         return $summary ?: '';
     }
-
-    /**
-     * @return string
-     */
-    public function getType(): string
-    {
-        return _t(__CLASS__ . '.BlockType', 'Card');
-    }
 }
