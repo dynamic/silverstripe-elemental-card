@@ -19,6 +19,12 @@ parameters:
 			path: src/Element/ElementCard.php
 
 		-
+			message: '#^First argument passed to _t\(\) must have exactly one period\.$#'
+			identifier: translation.key
+			count: 1
+			path: src/Element/ElementCard.php
+
+		-
 			message: '#^Static property Dynamic\\Elements\\Card\\Elements\\ElementCard\:\:\$cascade_deletes is never read, only written\.$#'
 			identifier: property.onlyWritten
 			count: 1
