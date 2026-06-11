@@ -118,11 +118,9 @@ class ElementCard extends BaseElement
     public function getCMSFields(): FieldList
     {
         $this->beforeUpdateCMSFields(function (FieldList $fields) {
-            // @phpstan-ignore-next-line
             $fields->dataFieldByName('Content')
                 ->setRows(8);
 
-            // @phpstan-ignore-next-line
             $fields->dataFieldByName('Image')
                 ->setFolderName('Uploads/Elements/Card');
             $fields->insertBefore('Position', $fields->dataFieldByName('Image'));
