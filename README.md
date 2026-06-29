@@ -2,7 +2,7 @@
 
 A simple Bootstrap-style Card for Silverstripe Elemental. Intended for use with Elemental Grid.
 
-![CI](https://github.com/dynamic/silverstripe-elemental-card/workflows/CI/badge.svg)
+[![CI](https://github.com/dynamic/silverstripe-elemental-card/actions/workflows/ci.yml/badge.svg)](https://github.com/dynamic/silverstripe-elemental-card/actions/workflows/ci.yml) [![Sponsors](https://img.shields.io/badge/GitHub-Sponsors-ff69b4?logo=github)](https://github.com/sponsors/dynamic)
 
 [![Latest Stable Version](https://poser.pugx.org/dynamic/silverstripe-elemental-card/v/stable)](https://packagist.org/packages/dynamic/silverstripe-elemental-card)
 [![Total Downloads](https://poser.pugx.org/dynamic/silverstripe-elemental-card/downloads)](https://packagist.org/packages/dynamic/silverstripe-elemental-card)
@@ -12,10 +12,10 @@ A simple Bootstrap-style Card for Silverstripe Elemental. Intended for use with 
 ## Requirements
 
 * PHP ^8.3
-* SilverStripe ^6.0
+* silverstripe/recipe-cms ^6.0
 * dnadesign/silverstripe-elemental ^6.0
-* silverstripe/linkfield ^5.0
 * jonom/focuspoint ^6.0
+* silverstripe/linkfield ^5.0
 
 ## Installation
 
@@ -29,10 +29,6 @@ After installation, run `dev/build` and `flush`:
 vendor/bin/sake dev/build flush=all
 ```
 
-## License
-
-See [License](LICENSE.md)
-
 ## Usage
 
 Elemental Card provides a flexible card component for displaying content with an optional image and link. Each card can include:
@@ -44,7 +40,7 @@ Elemental Card provides a flexible card component for displaying content with an
 
 Cards are perfect for:
 - Feature highlights
-- Team member profiles  
+- Team member profiles
 - Product or service showcases
 - News or blog post teasers
 - Call-to-action blocks
@@ -61,25 +57,28 @@ See [Elemental modules by Dynamic](https://github.com/orgs/dynamic/repositories?
 
 ## Configuration
 
-See [SilverStripe Elemental Configuration](https://github.com/silverstripe/silverstripe-elemental#configuration)
+See [SilverStripe Elemental Configuration](https://github.com/dnadesign/silverstripe-elemental#configuration)
 
 ## Maintainers
 
  *  [Dynamic](https://www.dynamicagency.com) (<dev@dynamicagency.com>)
 
 ## Bugtracker
-Bugs are tracked in the issues section of this repository. Before submitting an issue please read over
-existing issues to ensure yours is unique.
+
+Bugs are tracked in the issues section of this repository. Before submitting an issue please read over existing issues to ensure yours is unique.
 
 If the issue does look like a new bug:
 
  - Create a new issue
- - Describe the steps required to reproduce your issue, and the expected outcome. Unit tests, screenshots
- and screencasts can help here.
- - Describe your environment as detailed as possible: SilverStripe version, Browser, PHP version,
- Operating System, any installed SilverStripe modules.
+ - Describe the steps required to reproduce your issue, and the expected outcome. Unit tests, screenshots and screencasts can help here.
+ - Describe your environment as detailed as possible: SilverStripe version, Browser, PHP version, Operating System, any installed SilverStripe modules.
 
 Please report security issues to the module maintainers directly. Please don't file security issues in the bugtracker.
 
 ## Development and contribution
+
 If you would like to make contributions to the module please ensure you raise a pull request and discuss with the module maintainers.
+
+## License
+
+See [License](LICENSE.md)
